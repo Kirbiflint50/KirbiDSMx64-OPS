@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>Resouces/2000px-Crystal_Clear_action_exit.svg.png</file>
+        <file>Resouces/cpu-512.ico</file>
+        <file>Resouces/Open_file_document_paper_folder.ico</file>
+        <file>Resouces/ram-card-512.ico</file>
+        <file>Resouces/File DLL.png</file>
+        <file>Resouces/Save.png</file>
+        <file>Resouces/dll-2.png</file>
+        <file>Resouces/203-512.png</file>
+        <file>Resouces/2000px-Magnifying_glass_icon_mgx2.svg.png</file>
+        <file>Resouces/file_search.png</file>
+        <file>Resouces/203-512 (1).png</file>
+        <file>Resouces/Aa-512.png</file>
+        <file>Resouces/clipboard-97590_960_720.png</file>
+        <file>Resouces/Undo-icon.png</file>
+        <file>Resouces/text_x_hex.png</file>
+        <file>Resouces/binary-file.png</file>
+        <file>Resouces/246x0w.png</file>
+        <file>Resouces/decimal_small.png</file>
+        <file>Resouces/analysis-icon-6.png</file>
+        <file>Resouces/dustin-w-Redo-icon.png</file>
+        <file>Resouces/custom_settings-512.png</file>
+        <file>Resouces/net.png</file>
+        <file>Resouces/save-icon-9.png</file>
+        <file>Resouces/ram.png</file>
+        <file>Resouces/File Format Exe-256x256.png</file>
+        <file>Resouces/arrow_glyph-15-512.png</file>
+        <file>Resouces/user_arrow_right-512.png</file>
+        <file>Resouces/iconhex.png</file>
+        <file>Resouces/Quick_restart.png</file>
+        <file>Resouces/broom_clean_clear_sweep_housework_dust-512.png</file>
+        <file>Resouces/Info-icon.png</file>
+    </qresource>
+</RCC>

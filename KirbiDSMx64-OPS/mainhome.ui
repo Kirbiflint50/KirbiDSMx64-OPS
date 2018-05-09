@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainHome</class>
+ <widget class="QMainWindow" name="MainHome">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1330</width>
+    <height>716</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainHome</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="0" colspan="2">
+     <widget class="QPlainTextEdit" name="plainTextEdit_4">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="QPlainTextEdit" name="plainTextEdit_3">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="2">
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1330</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuSave_Hex_Dump">
+     <property name="title">
+      <string>Save Hex Dump</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/Resouces/iconhex.png</normaloff>:/icons/Resouces/iconhex.png</iconset>
+     </property>
+     <addaction name="actionDump_1_Complete"/>
+     <addaction name="actionDump_2_Complete"/>
+     <addaction name="actionDump_3_Complete_2"/>
+    </widget>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClear"/>
+    <addaction name="actionSave_disassembly"/>
+    <addaction name="menuSave_Hex_Dump"/>
+    <addaction name="actionSave_memory_map"/>
+    <addaction name="actionSave_imports"/>
+    <addaction name="actionSave_exports"/>
+    <addaction name="actionSave_relocations"/>
+    <addaction name="actionRestart"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuHex_Dump_View">
+     <property name="title">
+      <string>Hex Dump (View)</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/Resouces/text_x_hex.png</normaloff>:/icons/Resouces/text_x_hex.png</iconset>
+     </property>
+     <addaction name="actionDump_1_Not_all_the_file"/>
+     <addaction name="actionDump_2_Not_all_the_file"/>
+     <addaction name="actionDump_3_Complete"/>
+    </widget>
+    <widget class="QMenu" name="menuSearch_for">
+     <property name="title">
+      <string>Search for </string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/Resouces/file_search.png</normaloff>:/icons/Resouces/file_search.png</iconset>
+     </property>
+     <addaction name="actionAll_Strings"/>
+    </widget>
+    <addaction name="menuHex_Dump_View"/>
+    <addaction name="actionPE_Infos_Memory_Map_View"/>
+    <addaction name="actionProtection_analyzer"/>
+    <addaction name="actionAddressConverter_values_converter"/>
+    <addaction name="actionImports_table_View"/>
+    <addaction name="actionExports_table_View"/>
+    <addaction name="actionRelocations_Viewer"/>
+    <addaction name="separator"/>
+    <addaction name="menuSearch_for"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <widget class="QMenu" name="menuDisassembler">
+     <property name="title">
+      <string>Disassembler</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/Resouces/cpu-512.ico</normaloff>:/icons/Resouces/cpu-512.ico</iconset>
+     </property>
+     <addaction name="actionDisassemble_a_section"/>
+    </widget>
+    <widget class="QMenu" name="menuDecompile">
+     <property name="title">
+      <string>Decompile </string>
+     </property>
+     <addaction name="actionC_code"/>
+    </widget>
+    <addaction name="actionSection_adder"/>
+    <addaction name="actionImport_adder"/>
+    <addaction name="actionRelocation_adder"/>
+    <addaction name="separator"/>
+    <addaction name="menuDisassembler"/>
+    <addaction name="menuDecompile"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuCopy">
+     <property name="title">
+      <string>Copy</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/Resouces/clipboard-97590_960_720.png</normaloff>:/icons/Resouces/clipboard-97590_960_720.png</iconset>
+     </property>
+     <addaction name="actionAddress_VA"/>
+     <addaction name="actionRVA"/>
+     <addaction name="actionOffset"/>
+     <addaction name="actionSelected_lines"/>
+    </widget>
+    <widget class="QMenu" name="menuGo_to">
+     <property name="title">
+      <string>Go to</string>
+     </property>
+     <property name="icon">
+      <iconset resource="icons.qrc">
+       <normaloff>:/icons/Resouces/user_arrow_right-512.png</normaloff>:/icons/Resouces/user_arrow_right-512.png</iconset>
+     </property>
+     <addaction name="actionExpression"/>
+    </widget>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="menuCopy"/>
+    <addaction name="separator"/>
+    <addaction name="menuGo_to"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>KirbiDSMx64</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionPE_Infos_Memory_Map_View"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="actionImports_table_View"/>
+   <addaction name="actionExports_table_View"/>
+   <addaction name="actionAddressConverter_values_converter"/>
+   <addaction name="actionAll_Strings"/>
+   <addaction name="actionC_code"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/Open_file_document_paper_folder.ico</normaloff>:/icons/Resouces/Open_file_document_paper_folder.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Open      CTRL+O</string>
+   </property>
+  </action>
+  <action name="actionSave_disassembly">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/save-icon-9.png</normaloff>:/icons/Resouces/save-icon-9.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save disassembly</string>
+   </property>
+  </action>
+  <action name="actionSave_memory_map">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/ram.png</normaloff>:/icons/Resouces/ram.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save memory map</string>
+   </property>
+  </action>
+  <action name="actionSave_imports">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/File Format Exe-256x256.png</normaloff>:/icons/Resouces/File Format Exe-256x256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save imports</string>
+   </property>
+  </action>
+  <action name="actionSave_exports">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/File DLL.png</normaloff>:/icons/Resouces/File DLL.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save exports</string>
+   </property>
+  </action>
+  <action name="actionSave_relocations">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/Save.png</normaloff>:/icons/Resouces/Save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save relocations</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/2000px-Crystal_Clear_action_exit.svg.png</normaloff>:/icons/Resouces/2000px-Crystal_Clear_action_exit.svg.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit      
+F1</string>
+   </property>
+  </action>
+  <action name="actionDump_1_Not_all_the_file">
+   <property name="text">
+    <string>Dump 1 (Complete)      ALT+H+1</string>
+   </property>
+  </action>
+  <action name="actionDump_2_Not_all_the_file">
+   <property name="text">
+    <string>Dump 2 (Complete)      ALT+H+2</string>
+   </property>
+  </action>
+  <action name="actionDump_3_Complete">
+   <property name="text">
+    <string>Dump 3 (Complete)      ALT+H+3</string>
+   </property>
+  </action>
+  <action name="actionPE_Infos_Memory_Map_View">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/ram-card-512.ico</normaloff>:/icons/Resouces/ram-card-512.ico</iconset>
+   </property>
+   <property name="text">
+    <string>PE Infos + Memory Map (View)                       ALT+M</string>
+   </property>
+  </action>
+  <action name="actionProtection_analyzer">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/analysis-icon-6.png</normaloff>:/icons/Resouces/analysis-icon-6.png</iconset>
+   </property>
+   <property name="text">
+    <string>Protection analyzer                                            ALT+P</string>
+   </property>
+  </action>
+  <action name="actionAddressConverter_values_converter">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/decimal_small.png</normaloff>:/icons/Resouces/decimal_small.png</iconset>
+   </property>
+   <property name="text">
+    <string>AddressConverter + values converter             ALT+A</string>
+   </property>
+  </action>
+  <action name="actionImports_table_View">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/File Format Exe-256x256.png</normaloff>:/icons/Resouces/File Format Exe-256x256.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imports table (View)                                          ALT+U</string>
+   </property>
+  </action>
+  <action name="actionExports_table_View">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/dll-2.png</normaloff>:/icons/Resouces/dll-2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exports table (View)                                           ALT+E</string>
+   </property>
+  </action>
+  <action name="actionRelocations_Viewer">
+   <property name="text">
+    <string>Relocations (Viewer)                                          ALT+R</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/custom_settings-512.png</normaloff>:/icons/Resouces/custom_settings-512.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show settings       Shift+ALT+E</string>
+   </property>
+  </action>
+  <action name="actionSection_adder">
+   <property name="text">
+    <string>Section adder             Shift+ALT+A</string>
+   </property>
+  </action>
+  <action name="actionImport_adder">
+   <property name="text">
+    <string>Import adder              Shift+ALT+I</string>
+   </property>
+  </action>
+  <action name="actionRelocation_adder">
+   <property name="text">
+    <string>Relocation adder       Shift+ALT+T</string>
+   </property>
+  </action>
+  <action name="actionDisassemble_a_section">
+   <property name="text">
+    <string>Disassemble a section</string>
+   </property>
+  </action>
+  <action name="actionAll_Strings">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/Aa-512.png</normaloff>:/icons/Resouces/Aa-512.png</iconset>
+   </property>
+   <property name="text">
+    <string>All Strings          CTRL+S</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/Undo-icon.png</normaloff>:/icons/Resouces/Undo-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo       ALT+Z</string>
+   </property>
+  </action>
+  <action name="actionAddress_VA">
+   <property name="text">
+    <string>Address (VA)         Shift+A</string>
+   </property>
+  </action>
+  <action name="actionRVA">
+   <property name="text">
+    <string>RVA                        Shift+R</string>
+   </property>
+  </action>
+  <action name="actionOffset">
+   <property name="text">
+    <string>Offset                  
+ Shift+O</string>
+   </property>
+  </action>
+  <action name="actionSelected_lines">
+   <property name="text">
+    <string>Selected lines       Shift+S</string>
+   </property>
+  </action>
+  <action name="actionExpression">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/arrow_glyph-15-512.png</normaloff>:/icons/Resouces/arrow_glyph-15-512.png</iconset>
+   </property>
+   <property name="text">
+    <string>Expression      CTRL+G</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/dustin-w-Redo-icon.png</normaloff>:/icons/Resouces/dustin-w-Redo-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo        ALT+X</string>
+   </property>
+  </action>
+  <action name="actionC_code">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/net.png</normaloff>:/icons/Resouces/net.png</iconset>
+   </property>
+   <property name="text">
+    <string>.NET Decompiler</string>
+   </property>
+  </action>
+  <action name="actionDump_1_Complete">
+   <property name="text">
+    <string>Dump 1 (Complete)</string>
+   </property>
+  </action>
+  <action name="actionDump_2_Complete">
+   <property name="text">
+    <string>Dump 2 (Complete)</string>
+   </property>
+  </action>
+  <action name="actionDump_3_Complete_2">
+   <property name="text">
+    <string>Dump 3 (Complete)</string>
+   </property>
+  </action>
+  <action name="actionRestart">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/Quick_restart.png</normaloff>:/icons/Resouces/Quick_restart.png</iconset>
+   </property>
+   <property name="text">
+    <string>Restart     F2</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/broom_clean_clear_sweep_housework_dust-512.png</normaloff>:/icons/Resouces/broom_clean_clear_sweep_housework_dust-512.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear   F3</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/Resouces/Info-icon.png</normaloff>:/icons/Resouces/Info-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
