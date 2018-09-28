@@ -73,4 +73,3 @@ QT tools
 ## Thanks to
 
 - Everyone who supported this project!
--
