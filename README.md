@@ -3,9 +3,9 @@ Open Source 64 bit disassembler for Windows
 
 KirbiDSMx64-OPS is re-made and the code is written in C\C++ and the UI is made in Qt. In this disassembler there are some more features which one of those is the .NET Decompiler plugin that is written in C#
 
-The idea to make an 64 disassembler it comes me because my passion of coding is always more 
-good and my knowledge It is always more better I think. Another reason that i decided to make this Disassembler, 
-it is that i'm inspired of x64dbg since it is a very nice debugger, then i decided to make something my own. 
+The idea to make the 64 disassembler it comes to me because of the passion of coding that is always more 
+good and my knowledge It is always more better. Another reason why I've decided to make this happen, 
+it is that I'm inspired of x64dbg since it is a very nice debugger, then I've chosen to make something on my own. 
 
 ## Some Screenshots
 
